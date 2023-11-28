@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['senha_5',['Senha',['../class_senha.html',1,'']]],
-  ['setcodigo_6',['setCodigo',['../class_codigo.html#ae1ba68c6d8c6ecb9b4615107e11409d6',1,'Codigo']]]
+  ['quadro_16',['Quadro',['../class_quadro.html',1,'Quadro'],['../class_quadro.html#a0f5066578f3b103bd7e232095e450e04',1,'Quadro::Quadro(const Codigo &amp;codigo, const Texto &amp;nome, const Texto &amp;descricao, const Limite &amp;limite)'],['../class_quadro.html#a90abd135de10b8d1564184f996977a1b',1,'Quadro::Quadro()=default']]]
 ];

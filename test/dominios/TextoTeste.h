@@ -1,20 +1,22 @@
-#ifndef KANBANSYSTEM_CODIGOTESTE_H
-#define KANBANSYSTEM_CODIGOTESTE_H
+//Marcos Noriyuki Miyata 18/0126890
+//Luis Henrique Wiltgen de Toledo 22/1003968
 
-#include "include/dominios/Codigo.h"
+#ifndef KANBANSYSTEM_TEXTOTESTE_H
+#define KANBANSYSTEM_TEXTOTESTE_H
+
 #include <stdexcept>
 #include <string>
+#include "include/dominios/Texto.h"
 
 using namespace std;
 
-class CodigoTeste {
-
+class TextoTeste {
 private:
     const static string VALOR_VALIDO;
 
     const static string VALOR_INVALIDO;
 
-    Codigo *codigo;
+    Texto *texto;
 
     int estado;
 
@@ -33,4 +35,5 @@ public:
     int run();
 };
 
-#endif //KANBANSYSTEM_CODIGOTESTE_H
+
+#endif //KANBANSYSTEM_TEXTOTESTE_H

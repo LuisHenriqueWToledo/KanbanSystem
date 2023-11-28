@@ -1,3 +1,5 @@
+//Marcos Noriyuki Miyata 18/0126890
+
 #ifndef COLUNA_H
 #define COLUNA_H
 
@@ -5,35 +7,36 @@
 
 using namespace std;
 
+/// Classe que representa uma coluna do quadro, que representa o status de um cartão.
+/// Regras de formato:
+/// - Deve ser "SOLICITADO", "EM EXECUÇÃO" ou "CONCLUÍDO".
 class Coluna {
 public:
 
-	private:
-	
-	// atributo de "status da coluna" deve ser alterado por outras classes.
-	//strings possiveis: "SOLICITADO" "EM_EXECUCAO" e "CONCLUIDO";
-				
-	public:
-			
-		string status;
-		
-		Coluna(const string &status);
-		
-		Coluna() = default;
-		
-		string getColuna() const
-		{
-			return status;
-		}
+private:
+    /// Atributo que armazena o status da coluna.
+    string status;
 
-    
-		void setStatus(const string &newStatus)
-		{
-			validarStatus(newStatus);
-        	this->status = newStatus;
-    	}
+    /// Valida o status passado por parâmetro, que deve ser "SOLICITADO", "EM EXECUÇÃO" ou "CONCLUÍDO".
+    static void validarStatus(const string &status);
 
+public:
+    /// Inicializa o objeto com o status passado por parâmetro.
+    Coluna(const string &status);
 
+    /// Inicializa o objeto com o status vazio.
+    Coluna() = default;
+
+    ///Atribui um novo status ao objeto.
+    void setStatus(const string &newStatus) {
+        validarStatus(newStatus);
+        this->status = newStatus;
+    }
+
+    ///Retorna o status do objeto.
+    string getStatus() const {
+        return status;
+    }
 };
 
 #endif // COLUNA_H

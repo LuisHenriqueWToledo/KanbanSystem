@@ -1,10 +1,15 @@
+//Marcos Noriyuki Miyata 18/0126890
+//Gustavo Vieira do Nascimento 22/2012872
+
 #ifndef KANBANSYSTEM_LIMITETESTE_H
 #define KANBANSYSTEM_LIMITETESTE_H
 
 
-#include "Limite.h"
+#include "include/dominios/Limite.h"
 
 class LimiteTeste {
+
+private:
     const static int VALOR_VALIDO;
 
     const static int VALOR_INVALIDO;

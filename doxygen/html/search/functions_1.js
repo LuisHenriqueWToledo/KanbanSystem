@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getcodigo_15',['getCodigo',['../class_codigo.html#ac263b3f7ff4f995fa72ad9101f1a8533',1,'Codigo']]]
+  ['email_42',['Email',['../class_email.html#a4a199734e29834046e8d9fa5d04dfd0d',1,'Email::Email(const string &amp;email)'],['../class_email.html#a5b74ed2ee8c170edc6d32eee149c2edf',1,'Email::Email()=default']]]
 ];

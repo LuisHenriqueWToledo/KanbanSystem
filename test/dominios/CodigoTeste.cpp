@@ -1,10 +1,10 @@
-#include "include/dominios/CodigoTeste.h"
+#include "CodigoTeste.h"
 
 const string CodigoTeste::VALOR_VALIDO = "LL45";
 const string CodigoTeste::VALOR_INVALIDO = "ll45";
 
 void CodigoTeste::setUp() {
-    codigo = new Codigo(VALOR_VALIDO);
+    codigo = new Codigo();
     estado = SUCESSO;
 }
 
@@ -14,8 +14,8 @@ void CodigoTeste::tearDown() {
 
 void CodigoTeste::testarCenarioSucesso() {
     try {
-        codigo->setCodigo(VALOR_VALIDO);
-        if (codigo->getCodigo() != VALOR_VALIDO) {
+        codigo->setValor(VALOR_VALIDO);
+        if (codigo->getValor() != VALOR_VALIDO) {
             estado = FALHA;
         }
     } catch (invalid_argument &e) {
@@ -25,7 +25,7 @@ void CodigoTeste::testarCenarioSucesso() {
 
 void CodigoTeste::testarCenarioFalha() {
     try {
-        codigo->setCodigo(VALOR_INVALIDO);
+        codigo->setValor(VALOR_INVALIDO);
         estado = FALHA;
     } catch (invalid_argument &e) {
         return;

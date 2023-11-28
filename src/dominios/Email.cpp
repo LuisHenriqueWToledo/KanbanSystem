@@ -5,7 +5,7 @@ Email::Email(const string &email) {
     this->email = email;
 }
 
-void Email::validarEmail(const std::string &email) {
+void Email::validarEmail(const string &email) {
     size_t tamanhoEmail = email.length();
     string nome;
     string dominio;
@@ -53,7 +53,7 @@ void Email::validarCaracter(const char &caracter) {
 
 }
 
-void Email::validarNome(const std::string &nome) {
+void Email::validarNome(const string &nome) {
     size_t tamanhoNome = nome.length();
 
     if (tamanhoNome < 2) {
@@ -69,7 +69,7 @@ void Email::validarNome(const std::string &nome) {
     }
 }
 
-void Email::validarDominio(const std::string &dominio) {
+void Email::validarDominio(const string &dominio) {
     size_t tamanhoDominio = dominio.length();
 
     if (tamanhoDominio < 3) {

@@ -1,35 +1,16 @@
 #include <istream>
 #include <iostream>
-#include "include/dominios/Email.h"
-#include "include/dominios/Codigo.h"
-#include "include/dominios/Senha.h"
-#include "include/dominios/Texto.h"
-#include "include/dominios/CodigoTeste.h"
-#include "include/dominios/LimiteTeste.h"
+#include "include/Interfaces.h"
+#include "include/controladoras/CntrIAAutenticacao.h"
+#include "include/Stubs.h"
+#include "include/controladoras/CntrISAutenticacao.h"
+#include "include/controladoras/CntrAInterface.h"
 
 using namespace std;
 
 int main() {
 
-    CodigoTeste codigoTeste{};
-    LimiteTeste limiteTeste{};
+    CntrAInterface cntrAInterface;
 
-    switch (codigoTeste.run()) {
-        case CodigoTeste::SUCESSO:
-            cout << "SUCESSO - CODIGO" << endl;
-            break;
-        case CodigoTeste::FALHA:
-            cout << "FALHA - CODIGO" << endl;
-            break;
-    }
-
-    switch (limiteTeste.run()) {
-        case LimiteTeste::SUCESSO:
-            cout << "SUCESSO - LIMITE" << endl;
-            break;
-        case LimiteTeste::FALHA:
-            cout << "FALHA - LIMITE" << endl;
-            break;
-    }
-    return 0;
+    return cntrAInterface.executar();
 }

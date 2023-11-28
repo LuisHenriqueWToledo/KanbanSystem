@@ -88,25 +88,35 @@ $(document).ready(function(){initNavTree('class_codigo.html',''); initResizable(
 <div class="title">Codigo Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_codigo_8h_source.html">Codigo.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5aed24ecbc0b7b072d9ff811b5cccee9"><td class="memItemLeft" align="right" valign="top"><a id="a5aed24ecbc0b7b072d9ff811b5cccee9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#a5aed24ecbc0b7b072d9ff811b5cccee9">Codigo</a> (string codigo)</td></tr>
-<tr class="memdesc:a5aed24ecbc0b7b072d9ff811b5cccee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa o objeto com o código passado por parâmetro. <br /></td></tr>
-<tr class="separator:a5aed24ecbc0b7b072d9ff811b5cccee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ba68c6d8c6ecb9b4615107e11409d6"><td class="memItemLeft" align="right" valign="top"><a id="ae1ba68c6d8c6ecb9b4615107e11409d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#ae1ba68c6d8c6ecb9b4615107e11409d6">setCodigo</a> (string codigo)</td></tr>
-<tr class="memdesc:ae1ba68c6d8c6ecb9b4615107e11409d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribui um novo código ao objeto. <br /></td></tr>
-<tr class="separator:ae1ba68c6d8c6ecb9b4615107e11409d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affaf113e1362bb1197bb17c69d48c4de"><td class="memItemLeft" align="right" valign="top"><a id="affaf113e1362bb1197bb17c69d48c4de"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#affaf113e1362bb1197bb17c69d48c4de">Codigo</a> (const string &amp;codigo)</td></tr>
+<tr class="memdesc:affaf113e1362bb1197bb17c69d48c4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa o objeto com o código passado por parâmetro. <br /></td></tr>
+<tr class="separator:affaf113e1362bb1197bb17c69d48c4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fcb5436745ce5323bddaec4c0bcc44d"><td class="memItemLeft" align="right" valign="top"><a id="a6fcb5436745ce5323bddaec4c0bcc44d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#a6fcb5436745ce5323bddaec4c0bcc44d">Codigo</a> ()=default</td></tr>
+<tr class="memdesc:a6fcb5436745ce5323bddaec4c0bcc44d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa o objeto com o código vazio. <br /></td></tr>
+<tr class="separator:a6fcb5436745ce5323bddaec4c0bcc44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029d6438c358af53dce0f3066569f337"><td class="memItemLeft" align="right" valign="top"><a id="a029d6438c358af53dce0f3066569f337"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#a029d6438c358af53dce0f3066569f337">setValor</a> (const string &amp;newCodigo)</td></tr>
+<tr class="memdesc:a029d6438c358af53dce0f3066569f337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribui um novo código ao objeto. <br /></td></tr>
+<tr class="separator:a029d6438c358af53dce0f3066569f337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac263b3f7ff4f995fa72ad9101f1a8533"><td class="memItemLeft" align="right" valign="top"><a id="ac263b3f7ff4f995fa72ad9101f1a8533"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#ac263b3f7ff4f995fa72ad9101f1a8533">getCodigo</a> () const</td></tr>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#ac263b3f7ff4f995fa72ad9101f1a8533">getValor</a> () const</td></tr>
 <tr class="memdesc:ac263b3f7ff4f995fa72ad9101f1a8533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o código do objeto. <br /></td></tr>
 <tr class="separator:ac263b3f7ff4f995fa72ad9101f1a8533"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe que representa o código de um cartão e de um quadro. Regras de formato:</p><ul>
+<li>Exemplo: "AB12".</li>
+<li>Deve ser composto por 2 letras maiúsculas e 2 dígitos. </li>
+</ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_codigo_8h_source.html">Codigo.h</a></li>
-<li>Codigo.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -114,7 +124,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_codigo.html">Codigo</a></li>
-    <li class="footer">Generated on Sat Oct 7 2023 11:12:16 for KanbanSystem by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Thu Oct 19 2023 20:50:10 for KanbanSystem by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
