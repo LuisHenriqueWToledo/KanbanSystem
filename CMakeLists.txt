@@ -3,7 +3,10 @@ project(KanbanSystem)
 
 set(CMAKE_CXX_STANDARD 14)
 
+find_package(SQLite3 REQUIRED)
+
 include_directories(.)
+configure_file(${CMAKE_SOURCE_DIR}/kanban.db ${CMAKE_BINARY_DIR}/kanban.db COPYONLY)
 
 add_executable(KanbanSystem
         src/dominios/Coluna.cpp
@@ -46,12 +49,19 @@ add_executable(KanbanSystem
         include/Interfaces.h
         include/controladoras/CntrIAAutenticacao.h
         src/controladoras/CntrIAAutenticacao.cpp
-        src/Stubs.cpp
-        include/Stubs.h
         include/containers/ContainerConta.h
         src/containers/ContainerConta.cpp
         include/controladoras/CntrISAutenticacao.h
         src/controladoras/CntrISAutenticacao.cpp
         include/controladoras/CntrAInterface.h
         src/controladoras/CntrAInterface.cpp
+        include/controladoras/CntrIAConta.h
+        include/controladoras/CntrIAConta.h
+        include/controladoras/CntrIAConta.h
+        src/controladoras/CntrIAConta.cpp
+        include/controladoras/CntrISConta.h
+        src/controladoras/CntrISConta.cpp
+        include/sqlite3.h
 )
+
+target_link_libraries(KanbanSystem sqlite3)

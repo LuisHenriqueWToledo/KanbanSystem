@@ -3,23 +3,22 @@
 
 #include <iostream>
 
-#include <map>
-
 #include <string>
 
 #include "include/entidades/Conta.h"
+#include "include/sqlite3.h"
 
 class ContainerConta {
-private:
-    map<string, Conta> container;
 public:
-    bool incluir(Conta);
 
-    bool remover(Email);
+    static bool incluir(const Conta &);
 
-    bool pesquisar(Conta *);
+    static bool remover(const Email &);
 
-    bool atualizar(Conta);
+    static Conta pesquisar(Conta);
+
+    static Conta atualizar(const Conta &);
+
 };
 
 #endif //KANBANSYSTEM_CONTAINERCONTA_H

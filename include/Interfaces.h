@@ -15,7 +15,7 @@ class ISGerenciamento;
 
 class IAAutenticacao {
 public:
-    virtual bool autenticar(Email *) = 0;
+    virtual Conta autenticar(Email *) = 0;
 
     virtual void setCntrIAutenticacao(ISAutenticacao *) = 0;
 
@@ -24,9 +24,13 @@ public:
 
 class IAConta {
 public:
-    virtual void cadastrar() = 0;
+    virtual bool incluir() = 0;
 
-    virtual void executar() = 0;
+    virtual bool remover(const Email &) = 0;
+
+    virtual Conta atualizar(Conta &) = 0;
+
+    virtual Conta pesquisar(Conta &) = 0;
 
     virtual void setCntrIAConta(ISConta *) = 0;
 
@@ -44,7 +48,7 @@ public:
 
 class ISAutenticacao {
 public:
-    virtual bool autenticar(const Email &, const Senha &) = 0;
+    virtual Conta autenticar(const Email &, const Senha &) = 0;
 
     virtual void setContainerConta(ContainerConta *) = 0;
 
@@ -53,13 +57,15 @@ public:
 
 class ISConta {
 public:
-    virtual void cadastrar(const Conta &) = 0;
+    virtual bool incluir(const Conta &) = 0;
 
-    virtual void descadastrar(const Email &) = 0;
+    virtual bool remover(const Email &) = 0;
 
-    virtual void editar(const Conta &) = 0;
+    virtual Conta atualizar(const Conta &) = 0;
 
-    virtual void consultar(Conta *) = 0;
+    virtual Conta pesquisar(const Conta &) = 0;
+
+    virtual void setCntrISConta(ContainerConta *) = 0;
 
     virtual ~ISConta() {};
 };
